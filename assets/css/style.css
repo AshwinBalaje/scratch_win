@@ -9,3 +9,19 @@
 .formContainer {
     padding: 20px;
 }
+
+#wavesBG {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    z-index: -100;
+}
+
+/*Larger for mobile */
+@media only screen and (min-width: 768px) {
+
+    .mainContainer {
+        margin-top: 200px;
+    }
+}
