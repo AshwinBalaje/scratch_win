@@ -31,31 +31,31 @@
           <h2>Form</h2>
           <form>
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="firstName" class="formField" required>
 
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="lastName" class="formField" required>
 
             <label for="emailAddress">Email</label>
-            <input type="email" id="emailAddress" name="emailAddress" required>
+            <input type="email" id="emailAddress" name="emailAddress" class="formField" required>
 
             <label for="phoneNumber">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="formField" required>
 
             <label for="street1">Address Line 1</label>
-            <input type="text" id="street1" name="street1" required>
+            <input type="text" id="street1" name="street1" class="formField" required>
 
             <label for="street2">Address Line 2</label>
-            <input type="text" id="street2" name="street2" required>
+            <input type="text" id="street2" name="street2" class="formField" required>
 
             <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
+            <input type="text" id="city" name="city" class="formField" required>
 
             <label for="postalCode">Postal Code</label>
-            <input type="text" id="postalCode" name="postalCode" required>
+            <input type="text" id="postalCode" name="postalCode" class="formField" required>
 
             <label for="province">Province/Territory</label>
-            <select list="province" id="province" name="province" required>
+            <select list="province" id="province" name="province" class="formField" required>
               <option value=""> </option>
               <option value="AB">Alberta</option>
               <option value="BC">British Columbia</option>
@@ -73,9 +73,12 @@
             </select>
 
             <label for="userDob">Date of Birth</label>
-            <input type="date" id="userDob" name="userDob" required>
+            <input type="date" id="userDob" name="userDob" class="formField" required>
 
-            <input type="submit" value="Continue" id="submitBtn">
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" class="formField" required>
+            <label for="termsCheckbox" id="termsCheckboxLabel">I have read and accept all Terms and Conditions and Privacy Policy</label><br>
+            
+            <input type="submit" value="Submit" id="submitBtn">
           </form>
         </div>
 
