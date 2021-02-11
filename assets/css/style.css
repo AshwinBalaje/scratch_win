@@ -8,24 +8,42 @@
 
 .formContainer {
     background-color: white;
-    padding: 20px;
+    padding: 40px;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+
 }
 
 #wavesBG {
     position: absolute;
+
     bottom: 0;
     text-align: center;
     width: 100%;
     z-index: -100;
 }
 
+#submitBtn {
+    background-color: #1ecbe1;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 120px;
+    text-align: left;
+}
+
+input {
+    width: 200px;
+}
+
 /*Larger for mobile */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
 
     .mainContainer {
         margin-top: 200px;
     }
+
+    #wavesBG {}
+
 }

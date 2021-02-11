@@ -32,24 +32,57 @@
           <form>
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" required>
+
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName" name="lastName" required>
+
             <label for="emailAddress">Email</label>
             <input type="email" id="emailAddress" name="emailAddress" required>
+
             <label for="phoneNumber">Phone Number</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" required>
-            <label for="userAge">Age</label>
-            <input type="number" id="userAge" name="userAge" required>
-            <input type="submit" value="Submit">
+
+            <label for="street1">Address Line 1</label>
+            <input type="text" id="street1" name="street1" required>
+
+            <label for="street2">Address Line 2</label>
+            <input type="text" id="street2" name="street2" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="postalCode">Postal Code</label>
+            <input type="text" id="postalCode" name="postalCode" required>
+
+            <label for="province">Province/Territory</label>
+            <select list="province" id="province" name="province" required>
+              <option value=""> </option>
+              <option value="AB">Alberta</option>
+              <option value="BC">British Columbia</option>
+              <option value="MB">Manitoba</option>
+              <option value="NB">New Brunswick</option>
+              <option value="NL">Newfoundland and Labrador</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="NT">Northwest Territories</option>
+              <option value="NU">Nunavut</option>
+              <option value="ON">Ontario</option>
+              <option value="PE">Prince Edward Island</option>
+              <option value="QC">Quebec</option>
+              <option value="SK">Saskatchewan</option>
+              <option value="YT">Yukon</option>
+            </select>
+
+            <label for="userDob">Date of Birth</label>
+            <input type="date" id="userDob" name="userDob" required>
+
+            <input type="submit" value="Continue" id="submitBtn">
           </form>
         </div>
 
       </div>
     </div>
 
-    <img id="wavesBG" src="assets/images/waves.svg">
-      
-
+    <img id="wavesBG" src="assets/images/waves_desktop.svg">
 
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/foundation.js"></script>
