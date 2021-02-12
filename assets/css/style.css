@@ -138,6 +138,7 @@ p {
 
 .submitBtn {
     background-color: #1ecbe1;
+    margin-top: 20px;
     padding-left: 10px;
     color: white;
     border-radius: 10px;

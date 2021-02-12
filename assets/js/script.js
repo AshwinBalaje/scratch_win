@@ -57,10 +57,17 @@ function isPostalCheck(dataToCheck){
     return false;
 }
 
+function isDateCheck(dataToCheck){
+    let pattern = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
+
+    if(pattern.test(dataToCheck.field.value)){
+        return true;
+    }
+    return false;
+}
+
 function isCheckboxChecked(dataToCheck){
     
-    console.log(dataToCheck);
-
     if(dataToCheck.field.checked==true){
         return true;
     }
@@ -127,6 +134,9 @@ function initializeForm(){
     let province = document.querySelector("#province");
     let provinceError = document.querySelector("#provinceError");
 
+    let userDob = document.querySelector("#userDob");
+    let userDobError = document.querySelector("#userDobError");
+
     let termsCheckbox = document.querySelector("#termsCheckbox");
     let termsCheckboxError = document.querySelector("#termsCheckboxError");
 
@@ -140,6 +150,7 @@ function initializeForm(){
         {field: city, checker: hasCharsCheck, error: cityError, msg:"* Please enter a valid city."},
         {field: postalCode, checker: isPostalCheck, error: postalCodeError, msg:"* Please enter a valid postal code."},
         {field: province, checker: hasCharsCheck, error: provinceError, msg:"* Please select a valid province."},
+        {field: userDob, checker: isDateCheck, error: userDobError, msg:"* Please select a valid date of birth."},
         {field: termsCheckbox, checker: isCheckboxChecked, error: termsCheckboxError, msg:"* Please accept terms to continue."},
     ]
 
