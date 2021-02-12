@@ -33,36 +33,35 @@
             <fieldset>
               <label for="firstName">First Name</label>
               <input type="text" id="firstName" name="firstName" class="formField">
-              <p id="firstNameError"></p>
-
+              <p id="firstNameError" class="errMsg"></p>
 
               <label for="lastName">Last Name</label>
               <input type="text" id="lastName" name="lastName" class="formField">
-              <p id="lastNameError"></p>
+              <p id="lastNameError" class="errMsg"></p>
 
               <label for="emailAddress">Email</label>
               <input type="email" id="emailAddress" name="emailAddress" class="formField">
-              <p id="emailError"></p>
+              <p id="emailAddressError" class="errMsg"></p>
 
               <label for="phoneNumber">Phone Number</label>
-              <input type="tel" id="phoneNumber" name="phoneNumber" class="formField">
-              <p id="phoneError"></p>
+              <input type="text" id="phoneNumber" name="phoneNumber" class="formField">
+              <p id="phoneNumberError" class="errMsg"></p>
 
               <label for="street1">Address Line 1</label>
               <input type="text" id="street1" name="street1" class="formField">
-              <p id="street1Error"></p>
+              <p id="street1Error" class="errMsg"></p>
 
               <label for="street2">Address Line 2</label>
               <input type="text" id="street2" name="street2" class="formField">
-              <p id="street2Error"></p>
+              <p id="street2Error" class="errMsg"></p>
 
               <label for="city">City</label>
               <input type="text" id="city" name="city" class="formField">
-              <p id="cityError"></p>
+              <p id="cityError" class="errMsg"></p>
 
               <label for="postalCode">Postal Code</label>
               <input type="text" id="postalCode" name="postalCode" class="formField">
-              <p id="postalCodeError"></p>
+              <p id="postalCodeError" class="errMsg"></p>
 
 
               <label for="province">Province/Territory</label>
@@ -82,18 +81,18 @@
                 <option value="SK">Saskatchewan</option>
                 <option value="YT">Yukon</option>
               </select>
-              <p id="provinceError"></p>
+              <p id="provinceError" class="errMsg"></p>
 
               <label for="userDob">Date of Birth</label>
               <input type="date" id="userDob" name="userDob" class="formField">
-              <p id="userDobError"></p>
+              <p id="userDobError" class="errMsg"></p>
 
-              <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes">
-              <label for="termsCheckbox" id="termsCheckboxLabel">I consent to the Terms and Conditions and Privacy Policy</label><br>
-              <p id="termsError"></p>
+              <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" required>
+              <label for="termsCheckbox" id="termsCheckboxLabel">I consent to the Terms and Conditions and Privacy Policy.</label><br>
+              <p id="termsError" class="errMsg"></p>
 
               <input type="checkbox" id="marketingCheckbox" name="marketingCheckbox" value="yes">
-              <label for="marketingCheckbox" id="marketingCheckboxLabel">I consent to recieving communications regarding BuyMore Dollar products and sponsors. </label><br>
+              <label for="marketingCheckbox" id="marketingCheckboxLabel">I consent to communications regarding BuyMore Dollar products and sponsors. </label><br>
               
             </fieldset>
             

@@ -18,6 +18,43 @@ function hasNumsCheck(dataToCheck){
     return false;
 }
 
+function isEmailCheck(dataToCheck){
+    let pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if(pattern.test(dataToCheck.field.value)){
+        return true;
+    }
+    return false;
+}
+
+function isTelCheck(dataToCheck){
+    let pattern = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+
+    if(pattern.test(dataToCheck.field.value)){
+        return true;
+    }
+    return false;
+}
+
+function isAddressLineCheck(dataToCheck){
+    let pattern = /^(?:[Pp][Oo]\s[Bb][Oo][Xx]|[0-9]+)\s(?:[0-9A-Za-z\.'#]|[^\S\r\n])+/;
+
+    if(pattern.test(dataToCheck.field.value)){
+        return true;
+    }
+    return false;
+}
+
+function isPostalCheck(dataToCheck){
+    let pattern = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
+
+    if(pattern.test(dataToCheck.field.value)){
+        return true;
+    }
+    return false;
+}
+
+
 function errorsReset(){
     fieldsCheck.forEach(inputField =>{
         inputField.error.innerText = "";
@@ -72,25 +109,17 @@ function initializeForm(){
     let province = document.querySelector("#province");
     let provinceError = document.querySelector("#provinceError");
 
-    let userDob = document.querySelector("#userDob");
-    let userDobError = document.querySelector("#userDobError");
-
-    let termsCheckbox = document.querySelector("#termsCheckbox");
-    let termsCheckboxError = document.querySelector("#termsCheckboxError");
-
     //declaring our data object
     fieldsCheck = [
-        {field: firstName, checker: hasCharsCheck, error: firstNameError, msg:"Please enter a valid first name."},
-        {field: lastName, checker: hasCharsCheck, error: lastNameError, msg:"Please enter a valid last name."},
-        {field: emailAddress, checker: hasCharsCheck, error: emailAddressError, msg:"Please enter a valid email"},
-        {field: phoneNumber, checker: hasNumsCheck, error: phoneNumberError, msg:"Please enter a valid phone number."},
-        {field: street1, checker: hasCharsCheck, error: street1Error, msg:"Please enter a valid Address Line 1."},
-        {field: street2, checker: hasCharsCheck, error: street2Error, msg:"Please enter a valid Address Line 2."},
-        {field: city, checker: hasCharsCheck, error: cityError, msg:"Please enter a valid city."},
-        {field: postalCode, checker: hasCharsCheck, error: postalCodeError, msg:"Please enter a valid postal code."},
-        {field: province, checker: hasCharsCheck, error: provinceError, msg:"Please select a valid province."},
-        {field: userDob, checker: hasNumsCheck, error:  userDobError, msg:"Please enter a valid date of birth."},
-        {field: termsCheckbox, checker: hasCharsCheck, error: termsCheckboxError, msg:"Please accept our Terms and Conditions & Privacy Policy."},
+        {field: firstName, checker: hasCharsCheck, error: firstNameError, msg:"* Please enter a valid first name."},
+        {field: lastName, checker: hasCharsCheck, error: lastNameError, msg:"* Please enter a valid last name."},
+        {field: emailAddress, checker: isEmailCheck, error: emailAddressError, msg:"* Please enter a valid email."},
+        {field: phoneNumber, checker: isTelCheck, error: phoneNumberError, msg:"* Please enter a valid phone number."},
+        {field: street1, checker: isAddressLineCheck, error: street1Error, msg:"* Please enter a valid address line 1."},
+        {field: street2, checker: isAddressLineCheck, error: street2Error, msg:"* Please enter a valid address line 2."},
+        {field: city, checker: hasCharsCheck, error: cityError, msg:"* Please enter a valid city."},
+        {field: postalCode, checker: isPostalCheck, error: postalCodeError, msg:"* Please enter a valid postal code."},
+        {field: province, checker: hasCharsCheck, error: provinceError, msg:"* Please select a valid province."}
     ]
 
     let formSubmit = document.querySelector("#submitBtn");
