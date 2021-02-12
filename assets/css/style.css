@@ -52,7 +52,7 @@ h3 {
 }
 
 .mainContainer {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .formContainer {
@@ -67,7 +67,6 @@ h3 {
 .formField {
     border-radius: 8px;
     border: 1px solid black;
-    width: 350px;
 }
 
 #termsCheckboxLabel {
@@ -79,12 +78,26 @@ h3 {
     border-radius: 10px;
 }
 
-#wavesBG {
-    position: absolute;
+#marketingCheckboxLabel {
+    color: rgb(168, 168, 168);
+}
+
+#marketingCheckbox {
+    color: rgb(168, 168, 168);
+    border-radius: 10px;
+}
+
+#wavesMobile {
+    position: fixed;
     bottom: 0;
+    left: 0;
     text-align: center;
     width: 100%;
     z-index: -100;
+}
+
+#wavesDesktop {
+    display: none;
 }
 
 #submitBtn {
@@ -104,12 +117,35 @@ h3 {
 
 
 /*Larger for mobile */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1000px) {
 
     .mainContainer {
-        margin-top: 200px;
+        margin-top: 100px;
     }
 
-    #wavesBG {}
+    #marketingCheckboxLabel {
+        color: rgb(168, 168, 168);
+    }
+
+    .formField {
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 350px;
+    }
+
+    #wavesMobile {
+        display: none;
+    }
+
+    #wavesDesktop {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        z-index: -100;
+    }
+
 
 }

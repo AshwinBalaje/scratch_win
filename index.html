@@ -34,28 +34,28 @@
             <input type="text" id="firstName" name="firstName" class="formField" oninvalid="this.setCustomValidity('*Please enter a First Name')" required>
 
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" class="formField" required>
+            <input type="text" id="lastName" name="lastName" class="formField" oninvalid="this.setCustomValidity('*Please enter a Last Name')" required>
 
             <label for="emailAddress">Email</label>
-            <input type="email" id="emailAddress" name="emailAddress" class="formField" required>
+            <input type="email" id="emailAddress" name="emailAddress" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid email address.')" required>
 
             <label for="phoneNumber">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" class="formField" required>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid phone number.')" required>
 
             <label for="street1">Address Line 1</label>
-            <input type="text" id="street1" name="street1" class="formField" required>
+            <input type="text" id="street1" name="street1" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid address line 1.')" required>
 
             <label for="street2">Address Line 2</label>
-            <input type="text" id="street2" name="street2" class="formField" required>
+            <input type="text" id="street2" name="street2" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid address line 2.')" required>
 
             <label for="city">City</label>
-            <input type="text" id="city" name="city" class="formField" required>
+            <input type="text" id="city" name="city" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid city.')" required>
 
             <label for="postalCode">Postal Code</label>
-            <input type="text" id="postalCode" name="postalCode" class="formField" required>
+            <input type="text" id="postalCode" name="postalCode" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid Postal Code')" required>
 
             <label for="province">Province/Territory</label>
-            <select list="province" id="province" name="province" class="formField" required>
+            <select list="province" id="province" name="province" class="formField" oninvalid="this.setCustomValidity('*Please select a province or territory.')" required>
               <option value=""> </option>
               <option value="AB">Alberta</option>
               <option value="BC">British Columbia</option>
@@ -73,11 +73,14 @@
             </select>
 
             <label for="userDob">Date of Birth</label>
-            <input type="date" id="userDob" name="userDob" class="formField" required>
+            <input type="date" id="userDob" name="userDob" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid Postal Code.')" required>
 
-            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" required>
-            <label for="termsCheckbox" id="termsCheckboxLabel">I have read and accept all Terms and Conditions and Privacy Policy</label><br>
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" oninvalid="this.setCustomValidity('*You have not agreed to the terms and conditions, and privacy policy.')" required>
+            <label for="termsCheckbox" id="termsCheckboxLabel">I consent to the Terms and Conditions and Privacy Policy</label><br>
             
+            <input type="checkbox" id="marketingCheckbox" name="marketingCheckbox" value="yes" oninvalid="this.setCustomValidity('*You have not agreed to the terms and conditions, and privacy policy.')" required>
+            <label for="marketingCheckbox" id="marketingCheckboxLabel">I consent to recieving communications regarding BuyMore Dollar products and sponsors. </label><br>
+
             <input type="submit" value="Submit" id="submitBtn">
           </form>
         </div>
@@ -85,7 +88,8 @@
       </div>
     </div>
 
-    <img id="wavesBG" src="assets/images/waves_desktop.svg">
+    <img id="wavesMobile" src="assets/images/waves.svg">
+    <img id="wavesDesktop" src="assets/images/waves_desktop.svg">
 
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/foundation.js"></script>
