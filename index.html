@@ -24,14 +24,14 @@
 
         <div class="large-5 small-10 small-offset-1 cell">
           <h1>Lets Get Started</h1>
-          <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit sed</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed</p>
         </div>
 
         <div class="large-5 large-offset-1 small-10 small-offset-1 cell formContainer">
           <h2>Form</h2>
           <form>
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" class="formField" required>
+            <input type="text" id="firstName" name="firstName" class="formField" oninvalid="this.setCustomValidity('*Please enter a First Name')" required>
 
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName" name="lastName" class="formField" required>
@@ -75,7 +75,7 @@
             <label for="userDob">Date of Birth</label>
             <input type="date" id="userDob" name="userDob" class="formField" required>
 
-            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" class="formField" required>
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" required>
             <label for="termsCheckbox" id="termsCheckboxLabel">I have read and accept all Terms and Conditions and Privacy Policy</label><br>
             
             <input type="submit" value="Submit" id="submitBtn">
