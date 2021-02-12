@@ -26,6 +26,7 @@ function errorsReset(){
 
 
 function formChecker(e){
+    console.log("button clicked");
     let errorsDetected = 0;
     errorsReset();
     e.preventDefault();
