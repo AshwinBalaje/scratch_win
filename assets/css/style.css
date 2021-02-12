@@ -62,6 +62,10 @@ p {
     display: block;
 }
 
+#logo{
+    cursor: pointer;
+}
+
 .grey {
     background-color: grey;
 }
@@ -80,6 +84,10 @@ p {
 .legalContainer {
     margin-top: 40px;
     margin-bottom: 100px;
+}
+
+#legalLink:hover {
+    color: #1ecbe1;
 }
 
 .formBox {

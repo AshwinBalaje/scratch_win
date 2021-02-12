@@ -1,6 +1,7 @@
 let fieldsCheck;
 let formContainer = document.querySelector(".formContainer");
 let confirmContainer = document.querySelector(".confirmContainer");
+let legalContainer = document.querySelector(".legalContainer");
 
 
 function hasCharsCheck(dataToCheck){
@@ -101,6 +102,7 @@ function formChecker(e){
         console.log("no errors");
         formContainer.style.display = "none";
         confirmContainer.style.display = "block";
+        legalContainer.style.display = "none";
     }
 
 
@@ -154,14 +156,29 @@ function initializeForm(){
         {field: termsCheckbox, checker: isCheckboxChecked, error: termsCheckboxError, msg:"* Please accept terms to continue."},
     ]
 
+    let logoLink = document.querySelector("#logo");
     let formSubmit = document.querySelector("#formSubmitBtn");
     let confirmationBtn = document.querySelector("#confirmationBtn");
+    let legalLink = document.querySelector("#legalLink");
 
     formSubmit.addEventListener("click", formChecker);
 
     confirmationBtn.addEventListener("click", function(){
         formContainer.style.display = "block";
         confirmContainer.style.display = "none";
+        legalContainer.style.display = "none";
+    });
+
+    legalLink.addEventListener("click", function(){
+        formContainer.style.display = "none";
+        confirmContainer.style.display = "none";
+        legalContainer.style.display = "block";
+    });
+
+    logoLink.addEventListener("click", function(){
+        formContainer.style.display = "block";
+        confirmContainer.style.display = "none";
+        legalContainer.style.display = "none";
     });
 
 }
