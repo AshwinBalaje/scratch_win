@@ -36,7 +36,7 @@ function isTelCheck(dataToCheck){
     return false;
 }
 
-function isAddressLineCheck(dataToCheck){
+function isStreetCheck(dataToCheck){
     let pattern = /^(?:[Pp][Oo]\s[Bb][Oo][Xx]|[0-9]+)\s(?:[0-9A-Za-z\.'#]|[^\S\r\n])+/;
 
     if(pattern.test(dataToCheck.field.value)){
@@ -94,11 +94,8 @@ function initializeForm(){
     let phoneNumber = document.querySelector("#phoneNumber");
     let phoneNumberError = document.querySelector("#phoneNumberError");
 
-    let street1 = document.querySelector("#street1");
-    let street1Error = document.querySelector("#street1Error");
-
-    let street2 = document.querySelector("#street2");
-    let street2Error = document.querySelector("#street2Error");
+    let street = document.querySelector("#street1");
+    let streetError = document.querySelector("#street1Error");
 
     let city = document.querySelector("#city");
     let cityError = document.querySelector("#cityError");
@@ -115,8 +112,7 @@ function initializeForm(){
         {field: lastName, checker: hasCharsCheck, error: lastNameError, msg:"* Please enter a valid last name."},
         {field: emailAddress, checker: isEmailCheck, error: emailAddressError, msg:"* Please enter a valid email."},
         {field: phoneNumber, checker: isTelCheck, error: phoneNumberError, msg:"* Please enter a valid phone number."},
-        {field: street1, checker: isAddressLineCheck, error: street1Error, msg:"* Please enter a valid address line 1."},
-        {field: street2, checker: isAddressLineCheck, error: street2Error, msg:"* Please enter a valid address line 2."},
+        {field: street, checker: isStreetCheck, error: streetError, msg:"* Please enter a valid address line 1."},
         {field: city, checker: hasCharsCheck, error: cityError, msg:"* Please enter a valid city."},
         {field: postalCode, checker: isPostalCheck, error: postalCodeError, msg:"* Please enter a valid postal code."},
         {field: province, checker: hasCharsCheck, error: provinceError, msg:"* Please select a valid province."}
