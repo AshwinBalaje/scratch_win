@@ -53,6 +53,7 @@ h3 {
 
 .mainContainer {
     margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .formContainer {
@@ -120,7 +121,7 @@ h3 {
 @media only screen and (min-width: 1000px) {
 
     .mainContainer {
-        margin-top: 100px;
+        margin-top: 70px;
     }
 
     #marketingCheckboxLabel {
