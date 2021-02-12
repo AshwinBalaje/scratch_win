@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -19,7 +18,7 @@
       </div>
     </div>
 
-    <div class="grid-container mainContainer">
+    <div class="grid-container formContainer showDiv">
       <div class="grid-x grid-padding-x">
 
         <div class="large-5 small-10 small-offset-1 cell">
@@ -27,7 +26,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed</p>
         </div>
 
-        <div class="large-5 large-offset-1 small-10 small-offset-1 cell formContainer">
+        <div class="large-5 large-offset-1 small-10 small-offset-1 cell formBox">
           <h2>Form</h2>
           <form>
             <fieldset>
@@ -83,18 +82,34 @@
               <input type="date" id="userDob" name="userDob" class="formField">
               <p id="userDobError" class="errMsg"></p>
 
-              <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" required>
+              <input type="checkbox" id="termsCheckbox" name="termsCheckbox">
               <label for="termsCheckbox" id="termsCheckboxLabel">I consent to the Terms and Conditions and Privacy Policy.</label><br>
-              <p id="termsError" class="errMsg"></p>
+              <p id="termsCheckboxError" class="errMsg"></p>
 
               <input type="checkbox" id="marketingCheckbox" name="marketingCheckbox" value="yes">
               <label for="marketingCheckbox" id="marketingCheckboxLabel">I consent to communications regarding BuyMore Dollar products and sponsors. </label><br>
               
             </fieldset>
             
-            <input type="submit" value="Submit" id="submitBtn">
+            <input type="submit" value="Submit" id="formSubmitBtn" class="submitBtn">
 
           </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid-container confirmContainer hideDiv">
+      <div class="grid-x grid-padding-x">
+
+        <div class="large-5 small-10 small-offset-1 cell">
+          <h1>Thanks! <br> You are all set.</h1>
+        </div>
+
+        <div class="large-5 large-offset-1 small-10 small-offset-1 cell confirmBox">
+          <h2>Confirmation Page</h2>
+          <p>Thanks for registration. Let's play and win some prizes.</p>
+          <button id="confirmationBtn" class="submitBtn">Continue</button>
         </div>
 
       </div>

@@ -1,4 +1,7 @@
 let fieldsCheck;
+let formContainer = document.querySelector(".formContainer");
+let confirmContainer = document.querySelector(".confirmContainer");
+
 
 function hasCharsCheck(dataToCheck){
     let pattern = /^[a-zA-Z]+$/;
@@ -54,6 +57,17 @@ function isPostalCheck(dataToCheck){
     return false;
 }
 
+function isCheckboxChecked(dataToCheck){
+    
+    console.log(dataToCheck);
+
+    if(dataToCheck.field.checked==true){
+        return true;
+    }
+
+    return false;
+}
+
 
 function errorsReset(){
     fieldsCheck.forEach(inputField =>{
@@ -75,6 +89,13 @@ function formChecker(e){
             errorsDetected +=1;
         }
     });
+
+    if(errorsDetected==0){
+        console.log("no errors");
+        formContainer.style.display = "none";
+        confirmContainer.style.display = "block";
+    }
+
 
 }
 
@@ -106,6 +127,9 @@ function initializeForm(){
     let province = document.querySelector("#province");
     let provinceError = document.querySelector("#provinceError");
 
+    let termsCheckbox = document.querySelector("#termsCheckbox");
+    let termsCheckboxError = document.querySelector("#termsCheckboxError");
+
     //declaring our data object
     fieldsCheck = [
         {field: firstName, checker: hasCharsCheck, error: firstNameError, msg:"* Please enter a valid first name."},
@@ -115,10 +139,11 @@ function initializeForm(){
         {field: street, checker: isStreetCheck, error: streetError, msg:"* Please enter a valid address line 1."},
         {field: city, checker: hasCharsCheck, error: cityError, msg:"* Please enter a valid city."},
         {field: postalCode, checker: isPostalCheck, error: postalCodeError, msg:"* Please enter a valid postal code."},
-        {field: province, checker: hasCharsCheck, error: provinceError, msg:"* Please select a valid province."}
+        {field: province, checker: hasCharsCheck, error: provinceError, msg:"* Please select a valid province."},
+        {field: termsCheckbox, checker: isCheckboxChecked, error: termsCheckboxError, msg:"* Please accept terms to continue."},
     ]
 
-    let formSubmit = document.querySelector("#submitBtn");
+    let formSubmit = document.querySelector("#formSubmitBtn");
 
     formSubmit.addEventListener("click", formChecker);
 

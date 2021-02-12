@@ -50,22 +50,45 @@ p {
     color: black;
 }
 
+.hideDiv {
+    display: none;
+}
+
+.showDiv {
+    display: block;
+}
+
 .grey {
     background-color: grey;
 }
 
-.mainContainer {
+.formContainer {
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+}
+
+.confirmContainer {
     margin-top: 30px;
     margin-bottom: 100px;
 }
 
-.formContainer {
+.formBox {
     background-color: white;
     padding: 20px;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 
+}
+
+.confirmBox {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 .formField {
@@ -81,6 +104,7 @@ p {
 }
 
 #termsCheckboxLabel {
+    font-size: 12px;
     color: rgb(168, 168, 168);
 }
 
@@ -90,6 +114,7 @@ p {
 }
 
 #marketingCheckboxLabel {
+    font-size: 12px;
     color: rgb(168, 168, 168);
 }
 
@@ -111,8 +136,9 @@ p {
     display: none;
 }
 
-#submitBtn {
+.submitBtn {
     background-color: #1ecbe1;
+    padding-left: 10px;
     color: white;
     border-radius: 10px;
     border: none;
@@ -121,7 +147,7 @@ p {
     text-align: left;
 }
 
-#submitBtn:hover {
+.submitBtn:hover {
     background-color: #19a2b4;
 
 }
@@ -130,7 +156,7 @@ p {
 /*Larger for mobile */
 @media only screen and (min-width: 1000px) {
 
-    .mainContainer {
+    .formContainer {
         margin-top: 70px;
     }
 
