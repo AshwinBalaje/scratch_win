@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body>
+<body>
 
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
@@ -17,100 +17,39 @@
           <h1>BuyMore Dollars</h1>
         </div>
       </div>
+
+  
     </div>
 
     <div class="grid-container mainContainer">
-      <div class="grid-x grid-padding-x">
 
+      <div class="grid-x grid-padding-x">
         <div class="large-5 small-10 small-offset-1 cell">
           <h1>Lets Get Started</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed</p>
+          <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit sed</h2>
         </div>
-
-        <div class="large-5 large-offset-1 small-10 small-offset-1 cell formContainer">
-          <h2>Form</h2>
+        <div class="large-5 large-offset-1 small-10 small-offset-1 cell grey formContainer">
+          <h2>-----------Form----------</h2>
           <form>
-            <fieldset>
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" class="formField" oninvalid="this.setCustomValidity('*Please enter a First Name')" required>
-              <p id="firstNameError"></p>
-
-
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" class="formField" oninvalid="this.setCustomValidity('*Please enter a Last Name')" required>
-              <p id="lastNameError"></p>
-
-              <label for="emailAddress">Email</label>
-              <input type="email" id="emailAddress" name="emailAddress" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid email address.')" required>
-              <p id="emailError"></p>
-
-              <label for="phoneNumber">Phone Number</label>
-              <input type="tel" id="phoneNumber" name="phoneNumber" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid phone number.')" required>
-              <p id="phoneError"></p>
-
-              <label for="street1">Address Line 1</label>
-              <input type="text" id="street1" name="street1" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid address line 1.')" required>
-              <p id="street1Error"></p>
-
-              <label for="street2">Address Line 2</label>
-              <input type="text" id="street2" name="street2" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid address line 2.')" required>
-              <p id="street2Error"></p>
-
-              <label for="city">City</label>
-              <input type="text" id="city" name="city" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid city.')" required>
-              <p id="cityError"></p>
-
-              <label for="postalCode">Postal Code</label>
-              <input type="text" id="postalCode" name="postalCode" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid Postal Code')" required>
-              <p id="postalError"></p>
-
-
-              <label for="province">Province/Territory</label>
-              <select list="province" id="province" name="province" class="formField" oninvalid="this.setCustomValidity('*Please select a province or territory.')" required>
-                <option value=""> </option>
-                <option value="AB">Alberta</option>
-                <option value="BC">British Columbia</option>
-                <option value="MB">Manitoba</option>
-                <option value="NB">New Brunswick</option>
-                <option value="NL">Newfoundland and Labrador</option>
-                <option value="NS">Nova Scotia</option>
-                <option value="NT">Northwest Territories</option>
-                <option value="NU">Nunavut</option>
-                <option value="ON">Ontario</option>
-                <option value="PE">Prince Edward Island</option>
-                <option value="QC">Quebec</option>
-                <option value="SK">Saskatchewan</option>
-                <option value="YT">Yukon</option>
-              </select>
-              <p id="provinceError"></p>
-
-              <label for="userDob">Date of Birth</label>
-              <input type="date" id="userDob" name="userDob" class="formField" oninvalid="this.setCustomValidity('*Please enter a valid Postal Code.')" required>
-              <p id="dobError"></p>
-
-              <input type="checkbox" id="termsCheckbox" name="termsCheckbox" value="yes" oninvalid="this.setCustomValidity('*You have not agreed to the terms and conditions, and privacy policy.')" required>
-              <label for="termsCheckbox" id="termsCheckboxLabel">I consent to the Terms and Conditions and Privacy Policy</label><br>
-              <p id="termsError"></p>
-
-              <input type="checkbox" id="marketingCheckbox" name="marketingCheckbox" value="yes" oninvalid="this.setCustomValidity('*You have not agreed to the terms and conditions, and privacy policy.')" required>
-              <label for="marketingCheckbox" id="marketingCheckboxLabel">I consent to recieving communications regarding BuyMore Dollar products and sponsors. </label><br>
-              <p id="marketingError"></p>
-
-            </fieldset>
-            
-            <input type="submit" value="Submit" id="submitBtn">
-
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="emailAddress">Email</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <label for="userAge">Age</label>
+            <input type="number" id="userAge" name="userAge" required>
+            <input type="submit" value="Submit">
           </form>
         </div>
-
       </div>
     </div>
+      
 
-    <img id="wavesMobile" src="assets/images/waves.svg">
-    <img id="wavesDesktop" src="assets/images/waves_desktop.svg">
 
-    <script src="assets/js/vendor.js"></script>
-    <script src="assets/js/foundation.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/foundation.js"></script>
+</body>
 </html>
