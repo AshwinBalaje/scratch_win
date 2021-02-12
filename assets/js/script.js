@@ -144,8 +144,14 @@ function initializeForm(){
     ]
 
     let formSubmit = document.querySelector("#formSubmitBtn");
+    let confirmationBtn = document.querySelector("#confirmationBtn");
 
     formSubmit.addEventListener("click", formChecker);
+
+    confirmationBtn.addEventListener("click", function(){
+        formContainer.style.display = "block";
+        confirmContainer.style.display = "none";
+    });
 
 }
 
