@@ -1,0 +1,300 @@
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../fonts/Segoe\ UI.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('../fonts/Segoe\ UI\ Italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('../fonts/Segoe\ UI\ Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('../fonts/Segoe\ UI\ Bold\ Italic.woff') format('woff');
+}
+
+body {
+    font-family: 'Segoe UI Regular', sans-serif;
+    background-image: url(../images/waves_desktop.svg);
+    /* background-clip: padding-box; */
+    background-size: cover;
+    background-position: center left;
+    background-attachment: fixed;
+}
+
+
+h1 {
+    font-family: 'Segoe UI Bold', sans-serif;
+}
+
+h2 {
+    font-family: 'Segoe UI Bold', sans-serif;
+}
+
+h3 {
+    font-family: 'Segoe UI Bold', sans-serif;
+}
+
+h4 {
+    font-family: 'Segoe UI Bold', sans-serif;
+}
+
+p {
+    color: black;
+}
+
+.hideDiv {
+    display: none;
+}
+
+.showDiv {
+    display: block;
+}
+
+#logo{
+    cursor: pointer;
+    width: 100px;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.formContainer {
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+}
+
+.confirmContainer {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.legalContainer {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+#legalLink:hover {
+    color: #1ecbe1;
+}
+
+.formBox {
+    background-color: white;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.titleText {
+    margin-top: 1rem;
+}
+
+.formBox, .confirmBox {
+    margin-top: 3rem;
+}
+
+.titleText h1 {
+    font-size: 3rem;
+}
+
+.formBox h2 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.formBox h2:before, .formBox h2:after {
+    position: absolute;
+    content: '\a0';
+    width: 40%;
+    height: 2px;
+    top: 50%;
+    background-color: #000;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.formBox h2:before {
+    margin-left: -50%;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.formBox h2:after {
+    margin-left: 30px;
+}
+
+.titleText p {
+    margin-bottom: 0;
+}
+
+.confirmContainer .titleText {
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+.confirmBox {
+    /* margin-top: 30px; */
+    background-color: white;
+    height: 14rem;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.legalBox {
+    margin-top: 50px;
+    background-color: white;
+    padding: 30px 50px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.formField {
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+}
+
+.errMsg {
+    font-size: 12px;
+    margin-top: 0px;
+    color: red;
+}
+
+#termsCheckboxLabel {
+    font-size: 12px;
+    color: rgb(168, 168, 168);
+}
+
+#termsCheckbox {
+    color: rgb(168, 168, 168);
+    border-radius: 10px;
+}
+
+#marketingCheckboxLabel {
+    font-size: 12px;
+    color: rgb(168, 168, 168);
+}
+
+#marketingCheckbox {
+    color: rgb(168, 168, 168);
+    border-radius: 10px;
+}
+
+#wavesMobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: -100;
+}
+
+#wavesDesktop {
+    display: none;
+}
+
+.submitBtn {
+    background-color: #1ecbe1;
+    margin-top: 20px;
+    padding-left: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 120px;
+    text-align: left;
+    /* line-height: 40px; */
+}
+
+.submitBtn span, .submitBtn p {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 35px;
+}
+
+.submitBtn span {
+    padding-left: 5px;
+}
+
+.submitBtn:hover {
+    background-color: #19a2b4;
+}
+
+
+/*Larger for mobile */
+@media only screen and (min-width: 1000px) {
+
+    body {
+        background-attachment: fixed;
+        background-position-x: center;
+    }
+
+    .formContainer {
+        margin-top: 70px;
+    }
+
+    .titleText, .formBox {
+        text-align: left;
+        margin-top: 4rem;
+    }
+
+    #marketingCheckboxLabel {
+        color: rgb(168, 168, 168);
+    }
+
+    .formField {
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 350px;
+    }
+
+    .titleText h1 {
+        font-size: 5rem;
+    }
+
+    #wavesMobile {
+        display: none;
+    }
+
+    #wavesDesktop {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        z-index: -100;
+    }
+}
