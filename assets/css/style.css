@@ -110,7 +110,7 @@ p {
     margin-top: 1rem;
 }
 
-.formBox {
+.formBox, .confirmBox {
     margin-top: 3rem;
 }
 
@@ -118,13 +118,50 @@ p {
     font-size: 3rem;
 }
 
+.formBox h2 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.formBox h2:before, .formBox h2:after {
+    position: absolute;
+    content: '\a0';
+    width: 40%;
+    height: 2px;
+    top: 50%;
+    background-color: #000;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.formBox h2:before {
+    margin-left: -50%;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.formBox h2:after {
+    margin-left: 30px;
+}
+
 .titleText p {
     margin-bottom: 0;
 }
 
+.confirmContainer .titleText h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 .confirmBox {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     background-color: white;
+    height: 14rem;
     padding: 20px;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
@@ -198,11 +235,21 @@ p {
     height: 40px;
     width: 120px;
     text-align: left;
+    /* line-height: 40px; */
+}
+
+.submitBtn span, .submitBtn p {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 35px;
+}
+
+.submitBtn span {
+    padding-left: 5px;
 }
 
 .submitBtn:hover {
     background-color: #19a2b4;
-
 }
 
 
@@ -219,6 +266,7 @@ p {
     }
 
     .titleText, .formBox {
+        text-align: left;
         margin-top: 4rem;
     }
 
@@ -234,6 +282,11 @@ p {
 
     .titleText h1 {
         font-size: 5rem;
+    }
+
+    .confirmContainer .titleText h1 {
+        text-align: center;
+        font-size: 4.3rem;
     }
 
     #wavesMobile {
